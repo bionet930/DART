@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:contador/src/pages/home_page2.dart';
 
 
 class HomePage extends StatelessWidget{
@@ -9,17 +10,33 @@ class HomePage extends StatelessWidget{
     return Scaffold (
 
       appBar: AppBar(
-        title: Text('Mi Primera APP Flutter'),
-        centerTitle: true,
-        toolbarHeight: 65.35,
+        leading: Builder(
+          builder: (BuildContext){
+      return IconButton(
+      icon: const Icon(Icons.menu),
+      onPressed: () => print('Soy el Boton del Menu'),
+      );
+          },
       ),
-      body: Center(
-        child: Text('Número de TABS:'),
+      centerTitle: true,
+      title: Text('Primera App en Flutter'),
+      actions: <Widget> [
+      IconButton(
+        icon: new Icon(Icons.merge_type),
+        //onPressed: () => print('Hola soy un Boton de Accion'),
+        onPressed: (){
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => HomePage2()),
+          );
+        }
       ),
-
+      ],
+      )
 
     );
   }
+
 
 
 }
