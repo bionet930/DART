@@ -4,6 +4,9 @@ import 'package:contador/src/pages/home_page2.dart';
 
 class HomePage extends StatelessWidget{
 
+  final estiloTexto = new TextStyle( fontSize: 30 );
+  final conteo = 10;
+
 @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -32,7 +35,28 @@ class HomePage extends StatelessWidget{
         }
       ),
       ],
-      )
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('Numero de Clicks: ', style: estiloTexto),
+            Text( '$conteo', style: estiloTexto),
+          ],
+
+
+        ),
+      
+      
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {
+          print('Hola Mundo');
+          
+        },
+      ),
+      
 
     );
   }
