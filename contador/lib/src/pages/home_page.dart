@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:contador/src/pages/home_page2.dart';
+import 'package:contador/src/pages/contador_page.dart';
 
 
 class HomePage extends StatelessWidget{
@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget{
       centerTitle: true,
       title: Text('Primera App en Flutter'),
       actions: <Widget> [
-      IconButton(
+      /*IconButton(
         icon: new Icon(Icons.merge_type),
         //onPressed: () => print('Hola soy un Boton de Accion'),
         onPressed: (){
@@ -33,7 +33,7 @@ class HomePage extends StatelessWidget{
             MaterialPageRoute(builder: (context) => HomePage2()),
           );
         }
-      ),
+      ),*/
       ],
       ),
       body: Center(
